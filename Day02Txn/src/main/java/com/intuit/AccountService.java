@@ -1,5 +1,7 @@
 package com.intuit;
 
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -7,6 +9,7 @@ import org.springframework.stereotype.Component;
 public class AccountService
 {
 	@Autowired
+	@Resource(name="accountDaoImpl")
 	private AccountDao accountDao;
 	@Autowired
 	private StatementDao statementDao;
