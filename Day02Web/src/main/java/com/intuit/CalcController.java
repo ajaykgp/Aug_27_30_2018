@@ -1,5 +1,8 @@
 package com.intuit;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +21,22 @@ public class CalcController {
 
 	@Autowired
 	private Calculator calculator;
+
+	@Autowired
+	private List<String> mathOperations;
+	
+	@GetMapping("/mathinfo")
+	public Math getMathInfo() {
+		Math math = new Math();
+		math.setOperation("addition");
+		math.setOperands(Arrays.asList(12.2,34.5));
+		return math;
+	}
+	
+	@GetMapping("/ops")
+	public List<String> getAllOperations(){
+		return mathOperations;
+	}
 	
 	@GetMapping("/add/{a}/{b}")
 	public double add(@PathVariable double a, @PathVariable double b) {
