@@ -2,10 +2,10 @@
 
 * Pair up and implement this exercise. 
 
-* One of you will create a Spring boot application running on 8081
+* One of you will create a Spring boot application running on **8081**
 * Accessing **http://localhost:8081** will give you a text box where you enter a word as input 
-* On hitting the submit button your application will talk to **http://ipaddress_of_your_partner_:8082/{word}**  
-
+* On hitting the submit button your application will talk to **http://ipaddress_of_your_partner:8082/{word}**  
+* Display the result in the **same page**
 
 * The **8082** application is another Spring boot application that accepts a word and computes if the given word is a palindrome or not
 
