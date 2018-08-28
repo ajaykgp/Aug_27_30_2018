@@ -51,7 +51,12 @@ class AccountBean implements EntityBean{
 * raw java -> Spring -> Spring Boot
 
 
+### Spring concepts
 
+* **ApplicationContext** acts as a container
+* Active container -> Loads all the beans on startup
+* Scope is **singleton** by default
+* @Scope used to change the scope of a bean -> *prototype* or *session*
 
 
 
