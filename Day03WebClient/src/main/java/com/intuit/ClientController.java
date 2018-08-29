@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.LinkedMultiValueMap;
@@ -18,7 +19,9 @@ public class ClientController {
 
 	@Autowired
 	private RestTemplate restTemplate;
-	private String baseUrl = "http://localhost:8080/temperature";
+	
+	@Value("${temperature.service.url}")
+	private String baseUrl;
 	
 	@GetMapping("/temperature/{city}/{state}")
 	public String fetchTemperatureFromAnotherServer(@PathVariable String city, 
