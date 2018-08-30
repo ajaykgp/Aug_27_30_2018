@@ -9,6 +9,7 @@ public class PalinCheckController {
 
 	@GetMapping("/palincheck/{word}")
 	public String check(@PathVariable String word) {
+		try {Thread.sleep(2000);}catch(Exception ex) {};
 		String[] wordArr = word.split("");
 		StringBuilder reversedWord = new StringBuilder(""); 
 		for (int i = wordArr.length - 1; i > -1; i--) {
