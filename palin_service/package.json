@@ -1,0 +1,22 @@
+{
+  "name": "aug_27_30_2018",
+  "version": "1.0.0",
+  "description": "* *For People who love Coding*",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charitha/Aug_27_30_2018.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charitha/Aug_27_30_2018/issues"
+  },
+  "homepage": "https://github.com/charitha/Aug_27_30_2018#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
